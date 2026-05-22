@@ -30,6 +30,7 @@ fs.copyFileSync(
   path.join(distDir, "server/server.js"),
   path.join(outputDir, "functions/index.func/server.js")
 );
+fs.mkdirSync(path.join(outputDir, "functions/index.func/assets"), { recursive: true });
 for (const entry of fs.readdirSync(path.join(distDir, "server/assets"))) {
   fs.copyFileSync(
     path.join(distDir, "server/assets", entry),
