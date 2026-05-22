@@ -6,10 +6,12 @@
 // You can pass additional config via defineConfig({ vite: { ... } }) if needed.
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
-// Configured for Vercel deployment — Cloudflare plugin disabled.
+// Configured for Vercel static deployment — SSR disabled, app prerendered.
 export default defineConfig({
   cloudflare: false,
   tanstackStart: {
-    server: { preset: "vercel" },
+    server: { preset: "static" },
+    prerender: { enabled: true, crawlLinks: true },
+    pages: [{ path: "/" }],
   },
 });
