@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import { Zap, Target, Infinity as InfinityIcon, Lock, Sparkles, ArrowRight, Twitter, Linkedin, Youtube, MessageCircle } from "lucide-react";
+import { Zap, Target, Infinity as InfinityIcon, Lock, Sparkles, ArrowRight, Facebook, Instagram, Twitter, MessageCircle } from "lucide-react";
 import heroImg from "@/assets/hero-reveal.png";
 
 export const Route = createFileRoute("/")({
@@ -64,11 +64,18 @@ function Index() {
         </div>
         <div className="flex items-center gap-4">
           <span className="hidden text-sm text-neutral-600 sm:inline">Follow our journey</span>
-          {[Twitter, Linkedin, Youtube, MessageCircle].map((Icon, i) => (
-            <a key={i} href="#" className="flex h-9 w-9 items-center justify-center rounded-full border border-neutral-200 text-neutral-700 transition hover:border-neutral-400 hover:text-black">
-              <Icon className="h-4 w-4" />
-            </a>
-          ))}
+          <a href="https://www.facebook.com/share/1EEteW9BJ8/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" className="flex h-9 w-9 items-center justify-center rounded-full border border-neutral-200 text-neutral-700 transition hover:border-neutral-400 hover:text-black">
+            <Facebook className="h-4 w-4" />
+          </a>
+          <a href="https://www.instagram.com/mythmind_ai?igsh=a2F1bDc4NjJkZ3Y3&utm_source=qr" target="_blank" rel="noopener noreferrer" className="flex h-9 w-9 items-center justify-center rounded-full border border-neutral-200 text-neutral-700 transition hover:border-neutral-400 hover:text-black">
+            <Instagram className="h-4 w-4" />
+          </a>
+          <a href="https://x.com/mythmindai?s=21" target="_blank" rel="noopener noreferrer" className="flex h-9 w-9 items-center justify-center rounded-full border border-neutral-200 text-neutral-700 transition hover:border-neutral-400 hover:text-black">
+            <Twitter className="h-4 w-4" />
+          </a>
+          <a href="https://wa.me/9767656110" target="_blank" rel="noopener noreferrer" className="flex h-9 w-9 items-center justify-center rounded-full border border-neutral-200 text-neutral-700 transition hover:border-neutral-400 hover:text-black">
+            <MessageCircle className="h-4 w-4" />
+          </a>
         </div>
       </header>
 
