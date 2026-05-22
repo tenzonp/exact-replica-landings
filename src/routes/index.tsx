@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import { Zap, Target, Infinity as InfinityIcon, Lock, Sparkles, ArrowRight, Twitter, Linkedin, Youtube, MessageCircle } from "lucide-react";
+import { Zap, Target, Infinity as InfinityIcon, Lock, Sparkles, ArrowRight, Facebook, Instagram, Twitter, MessageCircle } from "lucide-react";
 import heroImg from "@/assets/hero-reveal.png";
 
 export const Route = createFileRoute("/")({
