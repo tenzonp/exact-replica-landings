@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Zap, Target, Infinity as InfinityIcon, Lock, Sparkles, ArrowRight, Facebook, Instagram, Twitter, MessageCircle } from "lucide-react";
 import heroImg from "@/assets/hero-reveal.png";
+import logoImg from "@/assets/logo.png";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -14,13 +15,7 @@ const BRAND = {
 };
 
 function Logo({ className = "h-8 w-8" }: { className?: string }) {
-  return (
-    <svg viewBox="0 0 48 48" className={className} aria-hidden="true">
-      <rect x="6" y="9" width="36" height="7" rx="3.5" fill={BRAND.yellow} />
-      <rect x="6" y="20" width="36" height="7" rx="3.5" fill={BRAND.green} />
-      <rect x="6" y="31" width="36" height="7" rx="3.5" fill={BRAND.red} />
-    </svg>
-  );
+  return <img src={logoImg} alt="Mythmind AI" className={`${className} object-contain`} />;
 }
 
 function useCountdown(target: Date) {
