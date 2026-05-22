@@ -41,9 +41,10 @@ function pad(n: number) {
   return n.toString().padStart(2, "0");
 }
 
+const LAUNCH_DATE = new Date("2026-05-27T00:00:00Z");
+
 function Index() {
-  const target = new Date(Date.now() + (24 * 24 * 3600 + 7 * 3600 + 42 * 60 + 19) * 1000);
-  const { days, hours, minutes, seconds } = useCountdown(target);
+  const { days, hours, minutes, seconds } = useCountdown(LAUNCH_DATE);
 
   const features = [
     { icon: Zap, label: "Autonomous\nAI Teams", color: BRAND.yellow, bg: "#FEF6D9" },
