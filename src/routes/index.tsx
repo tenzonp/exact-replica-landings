@@ -24,12 +24,13 @@ function Logo({ className = "h-8 w-8" }: { className?: string }) {
 }
 
 function useCountdown(target: Date) {
-  const [now, setNow] = useState(() => Date.now());
+  const [now, setNow] = useState<number | null>(null);
   useEffect(() => {
+    setNow(Date.now());
     const id = setInterval(() => setNow(Date.now()), 1000);
     return () => clearInterval(id);
   }, []);
-  const diff = Math.max(0, target.getTime() - now);
+  const diff = now === null ? target.getTime() - target.getTime() : Math.max(0, target.getTime() - now);
   const days = Math.floor(diff / 86400000);
   const hours = Math.floor((diff / 3600000) % 24);
   const minutes = Math.floor((diff / 60000) % 60);
